@@ -1,0 +1,46 @@
+# Default values for packerops-community.
+replicaCount: 2
+
+image:
+  repository: ghcr.io/packerops/packerops-scheduler
+  pullPolicy: IfNotPresent
+  tag: "v1.0.0"
+
+scheduler:
+  name: packerops-scheduler
+  leaderElect: true
+  port: 10259
+  secureServing: true
+
+audit:
+  enabled: true
+  quiescentThresholdWatts: 400.0
+  costPerKWh: 0.216
+
+serviceAccount:
+  create: true
+  name: packerops-scheduler-sa
+
+rbac:
+  create: true
+
+resources:
+  limits:
+    cpu: 1000m
+    memory: 1024Mi
+  requests:
+    cpu: 250m
+    memory: 256Mi
+
+securityContext:
+  runAsNonRoot: true
+  runAsUser: 10001
+  readOnlyRootFilesystem: true
+  allowPrivilegeEscalation: false
+  capabilities:
+    drop:
+      - ALL
+
+nodeSelector: {}
+tolerations: []
+affinity: {}

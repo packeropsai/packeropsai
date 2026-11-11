@@ -1,0 +1,20 @@
+apiVersion: v2
+name: packerops-community
+description: PackerOps Community Edition - Best-Fit Decreasing Kubernetes GPU Bin-Packing Scheduler & Idle Audit Tool
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+keywords:
+  - kubernetes
+  - gpu
+  - green-cloud
+  - scheduler
+  - finops
+  - bin-packing
+  - energy-efficiency
+home: https://packeropsai.com
+sources:
+  - https://github.com/packerops/packerops-ai
+maintainers:
+  - name: Dr. Oguzhan Sereflisan
+    email: oguzhan.sereflisan@ankarabilim.edu.tr
