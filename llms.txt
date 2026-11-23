@@ -1,0 +1,38 @@
+# PackerOpsAI
+
+> Two-Tier Green Cloud & Cluster Orchestrator for Multi-Tenant LLM Serving
+
+PackerOpsAI is an enterprise Kubernetes orchestration system and cloud-native control plane designed to eliminate quiescent idle power dissipation (400W–750W per node) in accelerated AI datacenters (NVIDIA B200, H100, A100) during diurnal traffic valleys.
+
+Founded on the scientific discoveries and patent portfolio of Dr. Oguzhan Sereflisan (Patent Application TR 2026/018692), PackerOpsAI co-optimizes physical server hardware power states and continuous token execution dynamics along the analytical GPU Roofline model.
+
+## Core Architectural Components
+
+- **Two-Tier Coupled MUBGA**: A multi-tiered heuristic genetic algorithm that co-optimizes host placement vector `h` (Tier-1 macro consolidation) and continuous batch regime vector `b` (Tier-2 micro Roofline pacing) in 15-minute decision windows.
+- **Lemma 1 Break-Even Decision Engine**: Prevents migration thrashing across 400 Gbps RoCEv2 interconnects (45 J/GB energy toll) by enforcing the mathematical inequality: `Δt > t_break-even = E_mig / (P_quiescent - P_sleep)`.
+- **Zero-Migration Stability Anchor**: Anchors prior epoch placements with 75% probability, eliminating 98.0% of diurnal model container thrashing (reducing network churn from 2,140 TB to 43 TB).
+- **Automated ACPI S3 Hardware Sleep**: Out-of-band Node Lifecycle Controller via IPMI/Redfish that powers down empty nodes to <= 15W BMC standby with sub-second Wake-on-LAN recovery upon traffic surges.
+- **Substation Power Headroom Expansion**: Dynamically caps peak surges, allowing datacenter operators to operate 25% more physical GPUs under identical electrical transformer capacity.
+
+## Community Edition vs. Enterprise
+
+- **Community Edition (Open Source, Apache 2.0)**:
+  - Repository: https://github.com/packeropsai/packeropsai
+  - Quiescent Leakage Audit CLI (`packerops-audit`): Quantifies kWh waste and financial leakage across idle Kubernetes GPU nodes.
+  - Deterministic Best-Fit Decreasing (BFD) Kubernetes Scheduling Plugin.
+  - 1-Command Kubectl install: `kubectl apply -f https://raw.githubusercontent.com/packeropsai/packeropsai/main/deploy/manifests/install.yaml`
+  - Helm 3+ Chart in `./deploy/helm/packerops-community`.
+
+- **Enterprise Edition (Patent-Protected Core)**:
+  - Full Coupled MUBGA Engine with Asymmetric Elitism (60/40) and Two-Tier Masked Crossover.
+  - Real-time DCGM + Redfish Telemetry & Automated ACPI S3/P8 Sleep Orchestration.
+  - Roofline Dynamic Continuous Token Batch Pacing (SGR-LS local search).
+  - Substation Transformer Headroom Protection Dashboard.
+  - Contact & Evaluation: https://packeropsai.com
+
+## Scientific Reference
+
+- **Title**: Two-Tier Energy-Efficient Cloud Orchestration for Multi-Tenant LLM Serving: Co-Optimizing GPU Consolidation and Token Batching Dynamics via Heuristic Genetic Optimization
+- **Author**: Dr. Oguzhan Sereflisan
+- **Patent Reference**: TR 2026/018692 and International PCT Priority
+- **Website**: https://packeropsai.com

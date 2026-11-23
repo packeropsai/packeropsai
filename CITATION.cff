@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use PackerOps or reference the Two-Tier MUBGA orchestration architecture, please cite it as below."
+authors:
+  - family-names: "Sereflisan"
+    given-names: "Oguzhan"
+    affiliation: "PackerOpsAI"
+    orcid: "https://orcid.org/0009-0005-4672-8871"
+title: "PackerOpsAI: Two-Tier Energy-Efficient Cloud Orchestration for Multi-Tenant LLM Serving"
+version: 0.1.0
+date-released: 2026-11-23
+url: "https://packeropsai.com"
+repository-code: "https://github.com/packeropsai/packeropsai"
+keywords:
+  - "kubernetes"
+  - "gpu-scheduling"
+  - "llm-serving"
+  - "vllm"
+  - "energy-efficiency"
+  - "green-computing"
+  - "bin-packing"
+  - "finops"
+  - "datacenter-orchestration"
+  - "mubga"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Sereflisan"
+      given-names: "Oguzhan"
+  title: "Two-Tier Energy-Efficient Cloud Orchestration for Multi-Tenant LLM Serving: Co-Optimizing GPU Consolidation and Token Batching Dynamics via Heuristic Genetic Optimization"
+  year: 2026
+  note: "Patent Application TR 2026/018692 and International Priority"

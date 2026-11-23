@@ -55,13 +55,32 @@ ESTIMATED ANNUAL FINANCIAL LOSS:  $5,486.75
 
 ---
 
-## 🛠️ Deploying to Kubernetes via Helm
+## 🛠️ Deploying to Kubernetes (2 Quick Methods)
 
-Install the community scheduler into your Kubernetes cluster (`v1.28+`):
+### Method A: One-Command Direct Install (Fastest, Zero Clone Required)
+Deploy the PackerOps scheduler and RBAC controller into your cluster in 5 seconds:
 
 ```bash
-# Add and install Helm chart
-helm install packerops-community ./deploy/helm/packerops-community \
+kubectl apply -f https://raw.githubusercontent.com/packeropsai/packeropsai/main/deploy/manifests/install.yaml
+```
+
+Verify the scheduler pod is healthy:
+```bash
+kubectl get pods -n packerops-system
+```
+
+---
+
+### Method B: Customizable Helm 3+ Installation
+If you prefer managing configurations (replica counts, resource limits, leader election) with Helm:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/packeropsai/packeropsai.git
+cd packeropsai
+
+# 2. Deploy using Helm into the 'packerops-system' namespace
+helm install packerops ./deploy/helm/packerops-community \
   --namespace packerops-system \
   --create-namespace \
   --set scheduler.leaderElect=true
