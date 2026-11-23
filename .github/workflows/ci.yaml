@@ -1,0 +1,27 @@
+name: Community CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Go
+      uses: actions/setup-go@v5
+      with:
+        go-version: '1.21'
+
+    - name: Run Tests
+      run: |
+        go test -v ./pkg/...
+
+    - name: Build Audit CLI
+      run: |
+        go build -v -o bin/packerops-audit cmd/packerops-audit/main.go
+        ./bin/packerops-audit --cost-per-kwh=0.216
