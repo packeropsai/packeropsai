@@ -26,8 +26,8 @@ Run the standalone zero-privilege audit tool to evaluate potential idle dissipat
 
 ```bash
 # Clone the community repository
-git clone https://github.com/packeropsai/packerops-community.git
-cd packerops-community
+git clone https://github.com/packeropsai/packeropsai.git
+cd packeropsai
 
 # Execute the quiescent leakage audit
 go run cmd/packerops-audit/main.go --cost-per-kwh=0.216

@@ -1,3 +1,3 @@
-module github.com/packeropsai/packerops-community
+module github.com/packeropsai/packeropsai
 
 go 1.11

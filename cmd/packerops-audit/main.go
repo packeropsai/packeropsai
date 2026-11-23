@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 
-	"github.com/packeropsai/packerops-community/pkg/audit"
+	"github.com/packeropsai/packeropsai/pkg/audit"
 )
 
 func main() {
