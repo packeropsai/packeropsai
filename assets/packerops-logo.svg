@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 64" width="100%" height="100%">
+  <!-- PACKEROPSAI LOGO - CONCEPT A: THE TWO-TIER MONOLITH -->
+  <g transform="translate(6, 8)">
+    <!-- Tier-1 Physical Host Pillar (Deep Obsidian Slate) -->
+    <rect x="0" y="0" width="16" height="48" rx="4" fill="#0F172A"/>
+    <!-- Tier-2 Dynamic Batching Pillar (Teal/Emerald) -->
+    <rect x="22" y="16" width="16" height="32" rx="4" fill="#0D9488"/>
+    <!-- Lemma 1 Energy Equilibrium Anchor -->
+    <circle cx="30" cy="6" r="4.5" fill="#10B981"/>
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(68, 42)">
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', system-ui, sans-serif" 
+          font-size="28" font-weight="700" fill="#0F172A" letter-spacing="-0.8">PackerOps</text>
+    <text x="142" y="0" 
+          font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', system-ui, sans-serif" 
+          font-size="28" font-weight="800" fill="#0D9488" letter-spacing="-0.5">AI</text>
+  </g>
+</svg>

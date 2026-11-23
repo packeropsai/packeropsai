@@ -1,59 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
-  <defs>
-    <linearGradient id="bgDark" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0F172A" />
-      <stop offset="100%" stop-color="#1E293B" />
-    </linearGradient>
-    <linearGradient id="pGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38BDF8" />
-      <stop offset="50%" stop-color="#2DD4BF" />
-      <stop offset="100%" stop-color="#10B981" />
-    </linearGradient>
-    <linearGradient id="boxGlow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#10B981" stop-opacity="0.9" />
-      <stop offset="100%" stop-color="#0284C7" stop-opacity="0.9" />
-    </linearGradient>
-    <filter id="drop" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.45"/>
-    </filter>
-  </defs>
-
-  <!-- Background Base Container -->
-  <rect width="512" height="512" rx="112" fill="url(#bgDark)"/>
+  <!-- GITHUB AVATAR: TWO-TIER MONOLITH ICON -->
+  <rect width="512" height="512" rx="108" fill="#0F172A"/>
   
-  <!-- Subtle Architectural Grid Pattern (Cluster Topology) -->
-  <path d="M64 160h384 M64 256h384 M64 352h384 M160 64v384 M256 64v384 M352 64v384" 
-        stroke="#334155" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.35"/>
-
-  <!-- Iconic Monogram Group (P + Bin-Packing Cluster) -->
-  <g filter="url(#drop)" transform="translate(116, 96)">
-    <!-- Vertical Backbone Spine of P (Cluster Rack Column) -->
-    <rect x="0" y="0" width="68" height="320" rx="20" fill="url(#pGrad)"/>
+  <g transform="translate(160, 116)">
+    <!-- Tier-1 Physical Host Pillar -->
+    <rect x="0" y="0" width="80" height="280" rx="20" fill="#F8FAFC"/>
     
-    <!-- Top Horizontal Blade of P -->
-    <rect x="56" y="0" width="144" height="64" rx="18" fill="url(#pGrad)"/>
+    <!-- Tier-2 Dynamic Batching Pillar -->
+    <rect x="112" y="96" width="80" height="184" rx="20" fill="#0D9488"/>
     
-    <!-- Outer Right Curve of P -->
-    <path d="M180 0 C 248 0, 248 160, 180 160 L 56 160 L 56 96 L 180 96 C 204 96, 204 64, 180 64 Z" 
-          fill="url(#pGrad)"/>
-
-    <!-- High-Density Consolidated Micro-Blocks inside P's Counter Loop -->
-    <!-- Node Block 1 -->
-    <rect x="88" y="24" width="76" height="32" rx="8" fill="#0F172A" opacity="0.9"/>
-    <circle cx="104" cy="40" r="4" fill="#38BDF8"/>
-    <rect x="116" y="37" width="36" height="6" rx="3" fill="#38BDF8" opacity="0.75"/>
-
-    <!-- Node Block 2 -->
-    <rect x="88" y="76" width="76" height="32" rx="8" fill="#0F172A" opacity="0.9"/>
-    <circle cx="104" cy="92" r="4" fill="#10B981"/>
-    <rect x="116" y="89" width="36" height="6" rx="3" fill="#10B981" opacity="0.75"/>
-
-    <!-- Idle Standby Scaled-To-Zero Slot (Empty Outline) -->
-    <rect x="88" y="210" width="130" height="48" rx="12" fill="none" stroke="#475569" stroke-width="3" stroke-dasharray="6 4"/>
-    <path d="M192 226h12l-12 12h12" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="112" cy="234" r="5" fill="#475569"/>
-
-    <!-- Dynamic Energy Flow Particle -->
-    <circle cx="212" cy="80" r="10" fill="#FBBF24"/>
+    <!-- Kinetic Energy Equilibrium Dot -->
+    <circle cx="152" cy="36" r="28" fill="#10B981"/>
   </g>
 </svg>
